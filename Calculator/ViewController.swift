@@ -107,5 +107,9 @@ class ViewController: UIViewController {
     @IBAction func add(_ sender: Any) {
         model.addition()
     }
+    
+    @IBAction func percentage(_ sender: Any) {
+        model.percentage()
+    }
 }
 

@@ -58,6 +58,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="%"/>
+                                                <connections>
+                                                    <action selector="percentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hv8-XH-wR5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5I-Os-tEh">
                                                 <rect key="frame" x="282" y="0.0" width="93" height="107"/>
