@@ -94,5 +94,18 @@ class ViewController: UIViewController {
     @IBAction func divide(_ sender: Any) {
         model.divide()
     }
+    
+    @IBAction func clear(_ sender: Any) {
+        model.clear()
+        labelDisplay.text = String("")
+    }
+    
+    @IBAction func subtract(_ sender: Any) {
+        model.subtraction()
+    }
+    
+    @IBAction func add(_ sender: Any) {
+        model.addition()
+    }
 }
 
