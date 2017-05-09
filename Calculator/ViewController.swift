@@ -110,6 +110,14 @@ class ViewController: UIViewController {
     
     @IBAction func percentage(_ sender: Any) {
         model.percentage()
+        if model.computedValue != nil {
+            labelDisplay.text = String(format: "%g", model.computedValue! / 100)
+        }
+    }
+    
+    @IBAction func decimal(_ sender: Any) {
+        model.addToNewValue(digit: ".")
+        labelDisplay.text = model.providedValue
     }
 }
 
