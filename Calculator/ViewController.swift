@@ -81,18 +81,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func multiply(_ sender: Any) {
-        model.multiply() 
+        model.multiply()
+        labelDisplay.text = String("*")
     }
     
     @IBAction func equals(_ sender: Any) {
         model.equals()
         if model.computedValue != nil {
-            labelDisplay.text = String(format: "%g", model.computedValue!)
+            labelDisplay.text = String(format: "= %g", model.computedValue!)
         }
     }
     
     @IBAction func divide(_ sender: Any) {
         model.divide()
+        labelDisplay.text = String("÷")
     }
     
     @IBAction func clear(_ sender: Any) {
@@ -102,10 +104,12 @@ class ViewController: UIViewController {
     
     @IBAction func subtract(_ sender: Any) {
         model.subtraction()
+        labelDisplay.text = String("-")
     }
     
     @IBAction func add(_ sender: Any) {
         model.addition()
+        labelDisplay.text = String("+")
     }
     
     @IBAction func percentage(_ sender: Any) {
@@ -118,6 +122,11 @@ class ViewController: UIViewController {
     @IBAction func decimal(_ sender: Any) {
         model.addToNewValue(digit: ".")
         labelDisplay.text = model.providedValue
+    }
+    
+    @IBAction func plusMinus(_ sender: Any) {
+        model.plusMinus()
+        labelDisplay.text = String(format: "%g", model.computedValue!)
     }
 }
 

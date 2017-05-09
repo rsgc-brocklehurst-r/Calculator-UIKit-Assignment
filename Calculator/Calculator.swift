@@ -72,6 +72,17 @@ class Calculator {
         updateState()
     }
     
+    //Changes the number between positive and negative
+    func plusMinus() {
+        
+        // Set the operation
+        operation = Operation.plusMinus
+        
+        updateState()
+        
+        equals()
+    }
+    
     
     
     /**
@@ -132,6 +143,12 @@ class Calculator {
         } else if operation == Operation.percentage {
             computedValue = computedValue! /
                 100
+        } else if operation == Operation.plusMinus {
+            if computedValue != nil {
+                computedValue = computedValue! * (-1)
+            } else {
+                computedValue = 0
+            }
         }
         
         // The operation selected has been performed, so get ready to receive new operation
