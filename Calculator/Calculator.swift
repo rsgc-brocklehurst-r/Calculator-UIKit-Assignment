@@ -31,6 +31,8 @@ class Calculator {
         operation = Operation.multiplication
         
         updateState()
+        
+        
     }
     
     /**
@@ -42,6 +44,8 @@ class Calculator {
         operation = Operation.division
         
         updateState()
+        
+        
     }
     
     
@@ -52,6 +56,8 @@ class Calculator {
         operation = Operation.addition
         
         updateState()
+        
+        
     }
     
     // Sets calculator operation to subtraction
@@ -61,6 +67,8 @@ class Calculator {
         operation = Operation.subtraction
         
         updateState()
+        
+        
     }
     
     // Sets calculator operation to percentage
@@ -69,18 +77,32 @@ class Calculator {
         // Set the operation
         operation = Operation.percentage
         
-        updateState()
+      updateState()
+        
+        equals()
     }
     
     //Changes the number between positive and negative
     func plusMinus() {
-        
-        // Set the operation
-        operation = Operation.plusMinus
-        
-        updateState()
-        
-        equals()
+        //detect state
+        if providedValue == "" {
+            //store in variable
+            if var temp = computedValue {
+                //multiply by -1
+                temp = temp * -1
+                //return to provided value
+                providedValue = String(format: "%g", temp)
+            }
+        }
+        else {
+            //store provided value as Double
+            if var temp = Double(providedValue) {
+                //multiply by -1
+                temp = temp * -1
+                //put back in provided value
+                providedValue = String(format: "%g", temp)
+            }
+        }
     }
     
     
@@ -143,18 +165,14 @@ class Calculator {
         } else if operation == Operation.percentage {
             computedValue = computedValue! /
                 100
-        } else if operation == Operation.plusMinus {
-            if computedValue != nil {
-                computedValue = computedValue! * (-1)
-            } else {
-                computedValue = 0
-            }
+            
         }
         
         // The operation selected has been performed, so get ready to receive new operation
         // and new value
         operation = nil
         providedValue = ""
+        
         
     }
     

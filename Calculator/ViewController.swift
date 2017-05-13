@@ -115,7 +115,7 @@ class ViewController: UIViewController {
     @IBAction func percentage(_ sender: Any) {
         model.percentage()
         if model.computedValue != nil {
-            labelDisplay.text = String(format: "%g", model.computedValue! / 100)
+            labelDisplay.text = String(format: "%g", model.computedValue!)
         }
     }
     
@@ -126,7 +126,7 @@ class ViewController: UIViewController {
     
     @IBAction func plusMinus(_ sender: Any) {
         model.plusMinus()
-        labelDisplay.text = String(format: "%g", model.computedValue!)
+         labelDisplay.text = model.providedValue
     }
 }
 
