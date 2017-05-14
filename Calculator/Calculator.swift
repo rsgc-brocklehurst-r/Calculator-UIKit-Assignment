@@ -165,7 +165,7 @@ class Calculator {
         } else if operation == Operation.percentage {
             computedValue = computedValue! /
                 100
-            
+        
         }
         
         // The operation selected has been performed, so get ready to receive new operation

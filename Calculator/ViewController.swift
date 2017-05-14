@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     
     @IBAction func multiply(_ sender: Any) {
         model.multiply()
-        labelDisplay.text = String("*")
+        labelDisplay.text = String("×")
     }
     
     @IBAction func equals(_ sender: Any) {
